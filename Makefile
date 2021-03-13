@@ -42,7 +42,7 @@ dist: clean
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f dmenu dmenu_path dmenu_run stest dmlogout dmsearch dmscrot $(DESTDIR)$(PREFIX)/bin
+	cp -f dmenu dmenu_path dmenu_run stest dmlogout dmsearch dmscrot dmkill $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_path
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_run
@@ -50,6 +50,7 @@ install: all
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmlogout
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmsearch
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmscrot
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmkill
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < dmenu.1 > $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
 	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
